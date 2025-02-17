@@ -56,7 +56,7 @@ const SignUp = () => {
       setApiError('');
       
       try {
-        const response = await fetch('http://localhost:3001/signup', {
+        const response = await fetch('https://mern-task-manager-r4sn.onrender.com/signup', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

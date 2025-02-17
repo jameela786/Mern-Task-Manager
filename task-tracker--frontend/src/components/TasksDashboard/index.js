@@ -35,7 +35,7 @@ const TaskDashboard = () => {
   const fetchTasks = async (perPage, page, statusFilter) => {
     try {
       const token = Cookies.get('jwt_token'); 
-      const response = await fetch(`http://localhost:3001/tasks?perPage=${perPage}&page=${page}&statusFilter=${statusFilter}`, {
+      const response = await fetch(`https://mern-task-manager-r4sn.onrender.com/tasks?perPage=${perPage}&page=${page}&statusFilter=${statusFilter}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -102,7 +102,7 @@ const TaskDashboard = () => {
   
     try {
       const token = Cookies.get('jwt_token');
-      const response = await fetch('http://localhost:3001/tasks', {
+      const response = await fetch('https://mern-task-manager-r4sn.onrender.com/tasks', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
         body: JSON.stringify(newTask),
@@ -128,7 +128,7 @@ const TaskDashboard = () => {
 
     try {
       const token = Cookies.get('jwt_token');
-      const response = await fetch(`http://localhost:3001/tasks/${updatedTask.id}`, {
+      const response = await fetch(`https://mern-task-manager-r4sn.onrender.com//tasks/${updatedTask.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -164,7 +164,7 @@ const TaskDashboard = () => {
   const handleEditSave = async () => {
     try {
       const token = Cookies.get('jwt_token'); 
-      const response = await fetch(`http://localhost:3001/tasks/${editedTask.id}`, {
+      const response = await fetch(`https://mern-task-manager-r4sn.onrender.com/asks/${editedTask.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -195,7 +195,7 @@ const TaskDashboard = () => {
   const handleDeleteTask = async (taskId) => {
     try {
       const token = Cookies.get('jwt_token');
-      const response = await fetch(`http://localhost:3001/tasks/${taskId}`, {
+      const response = await fetch(`https://mern-task-manager-r4sn.onrender.com//tasks/${taskId}`, {
         method: 'DELETE',
               headers: {
         Authorization: `Bearer ${token}`,
