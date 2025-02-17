@@ -128,7 +128,7 @@ const TaskDashboard = () => {
 
     try {
       const token = Cookies.get('jwt_token');
-      const response = await fetch(`https://mern-task-manager-r4sn.onrender.com//tasks/${updatedTask.id}`, {
+      const response = await fetch(`https://mern-task-manager-r4sn.onrender.com/tasks/${updatedTask.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -164,7 +164,7 @@ const TaskDashboard = () => {
   const handleEditSave = async () => {
     try {
       const token = Cookies.get('jwt_token'); 
-      const response = await fetch(`https://mern-task-manager-r4sn.onrender.com/asks/${editedTask.id}`, {
+      const response = await fetch(`https://mern-task-manager-r4sn.onrender.com/tasks/${editedTask.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -195,7 +195,7 @@ const TaskDashboard = () => {
   const handleDeleteTask = async (taskId) => {
     try {
       const token = Cookies.get('jwt_token');
-      const response = await fetch(`https://mern-task-manager-r4sn.onrender.com//tasks/${taskId}`, {
+      const response = await fetch(`https://mern-task-manager-r4sn.onrender.com/tasks/${taskId}`, {
         method: 'DELETE',
               headers: {
         Authorization: `Bearer ${token}`,
