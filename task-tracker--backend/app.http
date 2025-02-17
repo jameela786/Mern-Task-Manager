@@ -1,0 +1,13 @@
+POST http://localhost:3001/signup
+Content-Type: application/json
+{
+    "name":"jameela"
+
+}
+
+#signup
+curl -X POST http://localhost:3001/signup -H "Content-Type: application/json" -d '{"name":"Jameela Shaik", "email":"jameelashaik7799@gmail.com", "password":"jameela123"}'
+
+
+GET http://localhost:3001/tasks
+
