@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken');
 const cors = require('cors'); 
 const app = express();
 app.use(cors({
-    origin: 'https://mern-task-manager-r4sn.onrender.com', 
+    origin: '*', 
     methods: ['GET', 'POST','DELETE','PUT'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));

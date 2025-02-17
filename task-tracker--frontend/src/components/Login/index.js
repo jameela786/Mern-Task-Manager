@@ -95,7 +95,7 @@ const Login = () => {
 
         <form onSubmit={handleSubmit} className="login-form">
           <div className="form-group">
-            <label htmlFor="name">name</label>
+            <label htmlFor="name">Name</label>
             <input
               type="text"
               id="name"
@@ -126,9 +126,6 @@ const Login = () => {
             <label className="remember-me">
               <input type="checkbox" /> Remember me
             </label>
-            {/* <button type="button" className="forgot-password">
-              Forgot password?
-            </button> */}
           </div>
 
           <button
